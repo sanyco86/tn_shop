@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "PlayStation 4",
+    "price": 600,
+    "image": "https://i1.rozetka.ua/goods/1768766/sony_ps4_pro_rus_black_cuh_7000_images_1768766511.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Xbox ONE",
+    "price": 500,
+    "image": "https://i2.rozetka.ua/goods/4990714/44017320_images_4990714832.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Nintendo Switch",
+    "price": 300,
+    "image": "https://i1.rozetka.ua/goods/4221570/39306040_images_4221570528.jpg"
+  }
+]
