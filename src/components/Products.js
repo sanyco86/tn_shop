@@ -11,7 +11,7 @@ export default class Products extends Component {
   };
 
   getProducts() {
-    const url = 'products.json';
+    const url = 'http://localhost:8080/products.json';
 
     axios.get(url)
     .then(response => {

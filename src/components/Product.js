@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 
 import Info        from './product/Info';
-import CartContext from "./contexts/CartContext";
-import Button from "./Button";
+import CartButton from "./product/CartButton";
 
 export default class Product extends Component {
 
@@ -18,11 +17,7 @@ export default class Product extends Component {
     return (
       <li className='product' data-item={product.id} onDragStart={this.handleDragStart} draggable>
         <Info product={product}/>
-        <CartContext.Consumer>
-          {(cart) => (
-            <Button onClick={() => cart.addItemToCart(product)} text="В Корзину"/>
-          )}
-        </CartContext.Consumer>
+        <CartButton {...this.props}/>
       </li>
     )
   }

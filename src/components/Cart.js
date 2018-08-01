@@ -3,8 +3,8 @@ import React from 'react';
 import CartContext from './contexts/CartContext'
 
 import CartItem from "./CartItem";
-import Amount from './cart/Amount'
-import Table from "./cart/Table";
+import Amount   from './cart/Amount'
+import Table    from "./cart/Table";
 
 const Cart = () => (
   <CartContext.Consumer>

@@ -1,4 +1,1 @@
-export const formatPrice = (price) => {
-  return "$ " + price.toFixed(2);
-};
-
+export const formatPrice = (price) => "$ " + price.toFixed(2);
