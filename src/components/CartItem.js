@@ -13,7 +13,7 @@ export default class CartItem extends Component {
 
     return (
       <tr>
-        <td><Image src={item.image} alt={item.title}/></td>
+        <td><Image image={item.image}/></td>
         <td><Title title={item.title} /></td>
         <td><Quantity qty={item.qty}/></td>
         <td><Price price={item.price}/></td>

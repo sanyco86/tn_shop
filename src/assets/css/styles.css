@@ -2,16 +2,6 @@ body {
   margin-top: 50px;
 }
 
-[draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  /* Required to make elements draggable in old WebKit */
-  -khtml-user-drag: element;
-  -webkit-user-drag: element;
-}
-
 .product {
   border: 1px solid #eee;
   border-radius: 5px;

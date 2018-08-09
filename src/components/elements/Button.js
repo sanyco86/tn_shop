@@ -1,8 +1,7 @@
 import React from 'react'
+import { Button as Btn } from 'reactstrap';
 
 const Button = props =>
-  <button onClick={props.onClick}>
-    {props.text}
-  </button>;
+  <Btn onClick={props.onClick} >{props.text}</Btn>;
 
 export default Button

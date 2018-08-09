@@ -7,8 +7,8 @@ import {productPath} from "../../helpers/routes";
 
 const Info = ({product}) =>
   <Fragment>
-    <Image src={product.image} alt={product.title}/>
-    <Link to={productPath(product.id)}><Title title={product.title} /></Link>
+    <Image image={product.image}/>
+    <Link to={productPath(product.id)}><Title title={product.name} /></Link>
     <Price price={product.price} />
   </Fragment>;
 

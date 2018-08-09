@@ -1,7 +1,9 @@
 import React, {Component, Fragment} from 'react'
 import axios from "axios";
+import {URL_PRODUCTS} from '../../constants/API'
 
 import Product from '../Product'
+import Gallery from '../Gallery'
 
 export default class ProductPage extends Component {
   constructor(props) {
@@ -13,11 +15,11 @@ export default class ProductPage extends Component {
   }
 
   getProducts() {
-    const url = 'http://localhost:8080/products.json';
 
-    axios.get(url)
+    axios.get(URL_PRODUCTS)
     .then(response => {
-      let product = response.data.find((item) => item.id === Number(this.props.id));
+      let product = response.data.items.find(({fields}) => fields.id === Number(this.props.id)).fields;
+
       this.setState({ product: product })
     })
   }
@@ -30,7 +32,15 @@ export default class ProductPage extends Component {
     let { product } = this.state;
 
     return (
-      <Fragment>{product && <Product product={product}/>}</Fragment>
+      <Fragment>
+        {
+          product &&
+          <Fragment>
+            <Product product={product}/>
+            <Gallery images={product.images}/>
+          </Fragment>
+        }
+      </Fragment>
     )
   }
 }
